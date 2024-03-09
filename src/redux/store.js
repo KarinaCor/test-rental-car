@@ -11,7 +11,9 @@ import {
 } from 'redux-persist';
 import { carsReducer } from './carsSlice';
 import { persistStore, persistReducer } from 'redux-persist';
-import {  filterSlice } from './filter/filterSlice';
+import { filtersReducer } from './filter/filterSlice';
+
+// import {  filterSlice } from './filter/filterSlice';
 
 const carsPersistConfig = {
   key: 'favoriteCars', // Назва ключа в LocalStorage
@@ -23,12 +25,14 @@ const persistedReducer = persistReducer(carsPersistConfig, carsReducer);
 
 export const store = configureStore({
   reducer: {
+    filters: filtersReducer,
     cars: persistedReducer,
+
     // filter: filterReducer
-    filter: filterSlice
-    
+
+    // filter: filterSlice,
   },
-  middleware: getDefaultMiddleware =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],

@@ -25,18 +25,37 @@
 
 // export const { filterSet, filterCarsSet, filterDelete } = filterSlice.actions;
 
+// import { createSlice } from '@reduxjs/toolkit';
+
+// const initialState = '';
+
+// export const filterSlice = createSlice({
+//   name: 'filter',
+//   initialState,
+//   reducers: {
+//     filterChange: (state, { payload }) => {
+//       return (state = payload);
+//     },
+//   },
+// });
+
+// export const { filterChange } = filterSlice.actions;
+
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = '';
-
-export const filterSlice = createSlice({
-  name: 'filter',
+const initialState = {
+  carBrand: {},
+};
+const filtersSlice = createSlice({
+  name: 'filters',
   initialState,
   reducers: {
-    filterChange: (state, { payload }) => {
-      return (state = payload);
+    addToCarBrand: (state, { payload }) => {
+      state.carBrand = payload;
     },
   },
 });
 
-export const { filterChange } = filterSlice.actions;
+export const { addToCarBrand } = filtersSlice.actions;
+
+export const filtersReducer = filtersSlice.reducer;

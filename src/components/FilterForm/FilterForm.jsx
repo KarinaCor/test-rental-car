@@ -1,10 +1,7 @@
 
-
 import  { useState } from 'react';
-
 // import { useSelector } from 'react-redux';
 import makes from '../../components/data/makes.json';
-// import CarList from 'components/CarList/CarList';
 import * as SC from '../../components/FilterForm/FilterForm.styled';
 
 const FilterForm = ({ onFilterChange }) => {
