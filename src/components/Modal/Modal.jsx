@@ -1,63 +1,68 @@
-import { getCityFromAddress, getCountryFromAddress, getDriverLicense, getFormatMileage,  getFormatRentalPrice,  getMinAge, getSecurityDeposit } from '../helpers/utils';
+import {
+  getCityFromAddress,
+  getCountryFromAddress,
+  getDriverLicense,
+  getFormatMileage,
+  getFormatRentalPrice,
+  getMinAge,
+  getSecurityDeposit,
+} from '../helpers/utils';
 import * as SC from './Modal.styled';
 
 import { useEffect, useCallback } from 'react';
 
 const Modal = ({ children, isOpen, closeFnc, car }) => {
-      const closeOnClick = useCallback(() => {
-        if (isOpen) {
-          closeFnc();
-        }
-      }, [isOpen, closeFnc]);
+  const closeOnClick = useCallback(() => {
+    if (isOpen) {
+      closeFnc();
+    }
+  }, [isOpen, closeFnc]);
 
-      useEffect(() => {
-        const handlePressEsc = (e) => {
-          if (e.code === 'Escape') {
-            closeOnClick();
-          }
-        };
-        if (isOpen) {
-          document.body.classList.add('body-modal-open');
-          window.addEventListener('keydown', handlePressEsc);
-        } else {
-          document.body.classList.remove('body-modal-open');
-        }
+  useEffect(() => {
+    const handlePressEsc = (e) => {
+      if (e.code === 'Escape') {
+        closeOnClick();
+      }
+    };
+    if (isOpen) {
+      document.body.classList.add('body-modal-open');
+      window.addEventListener('keydown', handlePressEsc);
+    } else {
+      document.body.classList.remove('body-modal-open');
+    }
 
-        return () => {
-          window.removeEventListener('keydown', handlePressEsc);
-          document.body.classList.remove('body-modal-open');
-        };
-      }, [isOpen, closeOnClick]);
+    return () => {
+      window.removeEventListener('keydown', handlePressEsc);
+      document.body.classList.remove('body-modal-open');
+    };
+  }, [isOpen, closeOnClick]);
 
-      const handleOverlayClick = (e) => {
-        if (e.target === e.currentTarget) {
-          closeOnClick();
-        }
-      };
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeOnClick();
+    }
+  };
 
-     const {
-       id,
-       year,
-       make,
-       model,
-       type,
-       img,
-       description,
-       accessories,
-       fuelConsumption,
-       engineSize,
-       functionalities,
-       
-       
-     } = car;
-     const city = getCityFromAddress(car);
-     const country = getCountryFromAddress(car);
-     const minAge = getMinAge(car);
-     const license = getDriverLicense(car);
-     const deposit = getSecurityDeposit(car);
-     const formatMileage = getFormatMileage(car);
-     const price = getFormatRentalPrice(car);
-    
+  const {
+    id,
+    year,
+    make,
+    model,
+    type,
+    img,
+    description,
+    accessories,
+    fuelConsumption,
+    engineSize,
+    functionalities,
+  } = car;
+  const city = getCityFromAddress(car);
+  const country = getCountryFromAddress(car);
+  const minAge = getMinAge(car);
+  const license = getDriverLicense(car);
+  const deposit = getSecurityDeposit(car);
+  const formatMileage = getFormatMileage(car);
+  const price = getFormatRentalPrice(car);
 
   return (
     <>
@@ -135,5 +140,3 @@ const Modal = ({ children, isOpen, closeFnc, car }) => {
   );
 };
 export default Modal;
-
-

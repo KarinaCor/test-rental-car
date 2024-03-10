@@ -7,16 +7,9 @@ import icon from '../../components/img/sprite-icons.svg';
 
 import Modal from '../Modal/Modal';
 
-
 import { selectFavoriteCars } from '../../redux/carsSelectors';
 import { addToFavorites, removeFromFavorites } from '../../redux/carsSlice';
-import {
-  getCityFromAddress,
-  getCountryFromAddress,
-
-} from '../helpers/utils';
-
-
+import { getCityFromAddress, getCountryFromAddress } from '../helpers/utils';
 
 const CarList = ({ car }) => {
   const dispatch = useDispatch();
@@ -37,10 +30,9 @@ const CarList = ({ car }) => {
   } = car;
   const city = getCityFromAddress(car);
   const country = getCountryFromAddress(car);
-  
 
   const carIsFavorite = favoriteCars.some(
-    favoriteCar => favoriteCar.id === car.id
+    (favoriteCar) => favoriteCar.id === car.id
   );
 
   const handleToggleFavorite = () => {

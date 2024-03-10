@@ -29,8 +29,6 @@ export const Inner = styled.div`
   background-color: #12141780;
 `;
 
-
-
 export const InfoWrapper = styled.div`
   padding: 40px;
 `;
@@ -43,9 +41,6 @@ export const CloseBtn = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  
-
-
 `;
 
 export const ModalBackdrop = styled.div`
@@ -55,7 +50,6 @@ export const ModalBackdrop = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  
 `;
 
 export const ModalContent = styled.div`
@@ -74,7 +68,6 @@ export const ModalContent = styled.div`
   padding: 40px;
   overflow-y: auto;
   border-radius: 24px;
-
 `;
 
 export const BtnClose = styled.button`
@@ -92,12 +85,10 @@ export const BtnClose = styled.button`
   align-items: center;
   border: none;
   border-radius: 50%;
-
 `;
 
 export const SvgStyled = styled.svg`
   stroke: currentColor;
-  // fill: currentColor;
 `;
 
 export const ImgWrapper = styled.div`
@@ -117,17 +108,15 @@ export const Img = styled.img`
 export const NameWrapper = styled.div`
   font-size: 18px;
   font-weight: 500;
-  /* line-height: 24px; */
+
   margin-top: 14px;
 `;
-
 
 export const ModelSpan = styled.span`
   color: #3470ff;
 `;
 
 export const Description = styled.p`
-  /* margin-top: 8px; */
   margin-bottom: 0;
 `;
 
@@ -136,11 +125,7 @@ export const TypeTextStyled = styled.p`
 `;
 
 export const Span = styled.span`
-  /* background-color: #363535;
-  border-radius: 35px;
-  padding: 7px 14px; */
-  /* line-height: 18px; */
-  margin-bottom:0;
+  margin-bottom: 0;
   font-size: 12px;
   color: #12141780;
   &:not(:last-child):after {
@@ -154,45 +139,30 @@ export const SpanQ = styled.span`
   background-color: #f9f9f9;
   padding: 7px 14px;
   border-radius: 9999px;
-  /* border-radius: 35px;
-  padding: 7px 14px;  */
-  /* line-height: 18px; */
+
   font-size: 12px;
   color: #363535;
-  /* &:not(:last-child):after {
-    color: grey;
-    content: '|';
-    padding: 0 3px;
-  } */
 `;
 
 export const DescriptionText = styled.p`
   font-size: 14px;
   font-weight: 400;
-  /* line-height: 20px; */
 
   margin-top: 14px;
 `;
 
 export const AdressTextStyled = styled.p`
-  /* margin-top: 8px; */
   margin-bottom: 0;
 `;
-
-
 
 export const AccessoriesText = styled.p`
   font-size: 14px;
   font-weight: 500;
-  /* line-height: 20px;  */
-
-  /* margin-top: 24px; */
 `;
 
 export const RentalText = styled.p`
   font-size: 14px;
   font-weight: 500;
-  /* line-height: 20px; */
 
   margin-top: 24px;
 `;
@@ -203,30 +173,25 @@ export const Btn = styled.button`
   width: 100%;
   max-width: 168px;
   height: 44px;
-  // padding: 12px 50px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-background-color: blue;
+  background-color: blue;
 
   font-size: 14px;
   font-weight: 600;
-  /* line-height: 20px; */
 
   border-radius: 12px;
   border: none;
 
   margin-top: 24px;
-
 `;
 
 export const RentalMinAgeWrapper = styled.div`
   display: flex;
   gap: 8px;
-
-  /* margin-top: 15px; */
 `;
 
 export const RentalDepositWrapper = styled.div`
@@ -246,7 +211,7 @@ export const DescriptionRentalPStyled = styled.div`
   border-radius: 35px;
   font-size: 12px;
   font-weight: 400;
-  /* line-height: 18px; */
+
   letter-spacing: -0.24px;
 `;
 

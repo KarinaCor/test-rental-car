@@ -4,7 +4,6 @@ import * as SC from './FavoritePage.styled';
 
 import CarList from 'components/CarList/CarList';
 import { selectFavoriteCars } from '../../redux/carsSelectors';
-// import { CatalogList } from '../CatalogPage/CatalogPage.styled';
 
 const FavoritesPage = () => {
   const favoriteCars = useSelector(selectFavoriteCars);
@@ -20,7 +19,7 @@ const FavoritesPage = () => {
 
         {isShowFavoriteList && (
           <SC.CatalogList>
-            {favoriteCars.map(car => (
+            {favoriteCars.map((car) => (
               <li key={car.id}>
                 <CarList car={car} />
               </li>

@@ -1,13 +1,9 @@
-
 import Select from 'react-select';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  /* margin: 50px auto 25px;
-  max-width: 320px; */
   padding: 50px;
-  /* box-shadow: 0px 0px 10px;
-  border-radius: 15px; */
+
   display: flex;
   flex-direction: row;
   gap: 18px;
@@ -16,32 +12,18 @@ export const Wrapper = styled.div`
 `;
 
 export const ModelWrapper = styled.div`
-  /* margin: 50px auto 25px;
-  max-width: 320px; */
-  
-  /* box-shadow: 0px 0px 10px;
-  border-radius: 15px; */
   display: flex;
   flex-direction: column;
- font-size:14px;
-
-  
+  font-size: 14px;
 `;
 
 export const PriceWrapper = styled.div`
-  /* margin: 50px auto 25px;
-  max-width: 320px; */
-
-  /* box-shadow: 0px 0px 10px;
-  border-radius: 15px; */
   font-size: 14px;
   display: flex;
   flex-direction: column;
 `;
 
 export const SelectLabel = styled.p``;
-
-
 
 export const SelectModal = styled(Select)`
   width: 224px;
@@ -57,8 +39,7 @@ export const Form = styled.form`
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
-margin-bottom: 70px;
-
+  margin-bottom: 70px;
 `;
 
 export const Label = styled.label`
@@ -67,7 +48,7 @@ export const Label = styled.label`
   flex-direction: column;
   font-size: 14px;
   font-weight: 500;
- width:170px;
+  width: 170px;
 `;
 
 export const InputWrap = styled.div`
@@ -84,7 +65,6 @@ export const Input = styled.input`
   font-size: 18px;
   font-weight: 500;
   line-height: 1.11;
-
 `;
 
 export const FalseInput = styled.div`
@@ -93,7 +73,6 @@ export const FalseInput = styled.div`
   bottom: 14px;
   font-size: 18px;
   font-weight: 500;
- 
 `;
 
 export const Blink = styled.div`
@@ -102,7 +81,6 @@ export const Blink = styled.div`
   width: 1px;
   height: 18px;
   background-color: black;
- 
 `;
 
 export const WrapSecondInput = styled.div`
@@ -111,11 +89,10 @@ export const WrapSecondInput = styled.div`
 
 export const ButtonSearch = styled.button`
   display: flex;
-  /* height: 48px; */
+
   padding: 14px 44px 14px 44px;
-margin-bottom:1px;
-  /* justify-content: center; */
-  /* align-items: center; */
+  margin-bottom: 1px;
+
   font-weight: 600;
   font-size: 14px;
   color: #ffffff;
@@ -127,7 +104,6 @@ margin-bottom:1px;
     rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
     rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 
- 
   &:hover,
   &:focus {
     background-color: #0b44cd;
@@ -266,4 +242,3 @@ export const FilterFormStyled = styled.form`
     max-width: 100%;
   }
 `;
-

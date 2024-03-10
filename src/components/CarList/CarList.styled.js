@@ -20,7 +20,6 @@ export const ImgWrapper = styled.div`
 
   border-radius: 14px;
 
-
   overflow: hidden;
 `;
 
@@ -46,7 +45,6 @@ export const BtnFavorite = styled.button`
 
   background-color: transparent;
   border: none;
-
 `;
 
 export const Svg = styled.svg`
@@ -65,11 +63,11 @@ export const NameWrapper = styled.div`
 `;
 
 export const ModelSpan = styled.span`
-  color: #3470FF;
+  color: #3470ff;
 `;
 
 export const Price = styled.span`
-  padding-top:0;
+  padding-top: 0;
 `;
 
 export const AdressWrapper = styled.p`
@@ -84,7 +82,7 @@ export const TextWrapper = styled.p`
   display: flex;
   width: 270px;
   margin-top: 4px;
-  margin-bottom:0;
+  margin-bottom: 0;
 `;
 
 export const Span = styled.span`
@@ -107,7 +105,7 @@ export const Btn = styled.button`
   width: 100%;
   max-width: 274px;
   height: 44px;
-  // padding: 12px 99px;
+
   color: #ffffff;
   background-color: #3470ff;
   display: flex;
@@ -120,8 +118,10 @@ export const Btn = styled.button`
 
   border-radius: 12px;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  box-shadow:
+    rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 
   margin-top: 28px;
   &:hover,

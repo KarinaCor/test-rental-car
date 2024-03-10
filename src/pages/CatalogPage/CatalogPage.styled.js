@@ -4,9 +4,9 @@ export const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   margin-top: 70px;
-padding-left:128px;
-padding-right:128px;
-padding-bottom: 150px;
+  padding-left: 128px;
+  padding-right: 128px;
+  padding-bottom: 150px;
 `;
 
 export const CatalogList = styled.ul`
@@ -34,9 +34,8 @@ export const BtnLoadMore = styled.button`
   text-decoration-line: underline;
   border: none;
 
-
   &:hover,
   &:focus {
-    color: #0B44CD;
+    color: #0b44cd;
   }
 `;
