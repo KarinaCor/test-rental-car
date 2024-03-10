@@ -1,34 +1,39 @@
-import { getCityFromAddress, getCountryFromAddress, getDriverLicense, getFormatMileage,  getMinAge, getSecurityDeposit } from '../helpers/utils';
+import { getCityFromAddress, getCountryFromAddress, getDriverLicense, getFormatMileage,  getFormatRentalPrice,  getMinAge, getSecurityDeposit } from '../helpers/utils';
 import * as SC from './Modal.styled';
 
 import { useEffect, useCallback } from 'react';
 
 const Modal = ({ children, isOpen, closeFnc, car }) => {
-    const closeOnClick = useCallback(() => {
-      if (isOpen) {
-        closeFnc();
-      }
-    }, [isOpen, closeFnc]);
+      const closeOnClick = useCallback(() => {
+        if (isOpen) {
+          closeFnc();
+        }
+      }, [isOpen, closeFnc]);
 
-    useEffect(() => {
-      const handlePressEsc = e => {
-        if (e.code === 'Escape') {
+      useEffect(() => {
+        const handlePressEsc = (e) => {
+          if (e.code === 'Escape') {
+            closeOnClick();
+          }
+        };
+        if (isOpen) {
+          document.body.classList.add('body-modal-open');
+          window.addEventListener('keydown', handlePressEsc);
+        } else {
+          document.body.classList.remove('body-modal-open');
+        }
+
+        return () => {
+          window.removeEventListener('keydown', handlePressEsc);
+          document.body.classList.remove('body-modal-open');
+        };
+      }, [isOpen, closeOnClick]);
+
+      const handleOverlayClick = (e) => {
+        if (e.target === e.currentTarget) {
           closeOnClick();
         }
       };
-
-      window.addEventListener('keydown', handlePressEsc);
-
-      return () => {
-        window.removeEventListener('keydown', handlePressEsc);
-      };
-    }, [closeOnClick]);
-
-    const handleOverlayClick = e => {
-      if (e.target === e.currentTarget) {
-        closeOnClick();
-      }
-    };
 
      const {
        id,
@@ -42,7 +47,7 @@ const Modal = ({ children, isOpen, closeFnc, car }) => {
        fuelConsumption,
        engineSize,
        functionalities,
-       rentalPrice,
+       
        
      } = car;
      const city = getCityFromAddress(car);
@@ -51,12 +56,13 @@ const Modal = ({ children, isOpen, closeFnc, car }) => {
      const license = getDriverLicense(car);
      const deposit = getSecurityDeposit(car);
      const formatMileage = getFormatMileage(car);
+     const price = getFormatRentalPrice(car);
     
 
   return (
     <>
-      <div>
-        <SC.Overlay onClick={handleOverlayClick}>
+      <SC.Overlay onClick={handleOverlayClick}>
+        <SC.Modal onClick={handleOverlayClick}>
           <SC.Inner>
             {children}
             <SC.CloseBtn onClick={closeOnClick}>X</SC.CloseBtn>
@@ -103,28 +109,28 @@ const Modal = ({ children, isOpen, closeFnc, car }) => {
             <SC.RentalText>Rental Conditions:</SC.RentalText>
 
             <SC.RentalMinAgeWrapper>
-              <SC.Span>
+              <SC.SpanQ>
                 {minAge.key}: <SC.Price>{minAge.value}</SC.Price>
-              </SC.Span>
-              <SC.Span>{license}</SC.Span>
+              </SC.SpanQ>
+              <SC.SpanQ>{license}</SC.SpanQ>
             </SC.RentalMinAgeWrapper>
 
             <SC.RentalDepositWrapper>
-              <SC.Span>{deposit}</SC.Span>
-              <SC.Span>
+              <SC.SpanQ>{deposit}</SC.SpanQ>
+              <SC.SpanQ>
                 Mileage: <SC.Price>{formatMileage}</SC.Price>
-              </SC.Span>
-              <SC.Span>
-                Price: <SC.Price>{rentalPrice}</SC.Price>
-              </SC.Span>
+              </SC.SpanQ>
+              <SC.SpanQ>
+                Price: <SC.Price>{price}</SC.Price>
+              </SC.SpanQ>
             </SC.RentalDepositWrapper>
 
             <SC.Btn type="button">
-              <SC.A href="tel:+30000000">Rental car</SC.A>
+              <SC.A href="tel:+380730000000">Rental car</SC.A>
             </SC.Btn>
           </SC.InfoWrapper>
-        </SC.Overlay>
-      </div>
+        </SC.Modal>
+      </SC.Overlay>
     </>
   );
 };

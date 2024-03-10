@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 
 export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 20, 23, 0.5);
+  overflow: auto;
+`;
+
+export const Modal = styled.div`
   width: 541px;
   max-height: 752px;
-  /* height: 770px; */
   position: fixed;
-  /* top: 0;
-  left: 0; */
-  z-index: 1000;
+  z-index: 10000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   background-color: white;
 `;
 
@@ -19,15 +26,13 @@ export const Inner = styled.div`
   position: absolute;
   top: 18px;
   right: 18px;
-  background-color: white;
-  
+  background-color: #12141780;
 `;
 
 
 
 export const InfoWrapper = styled.div`
   padding: 40px;
-  /* padding-bottom: 60px; */
 `;
 
 export const CloseBtn = styled.button`
@@ -122,7 +127,8 @@ export const ModelSpan = styled.span`
 `;
 
 export const Description = styled.p`
-  margin-top: 8px;
+  /* margin-top: 8px; */
+  margin-bottom: 0;
 `;
 
 export const TypeTextStyled = styled.p`
@@ -134,6 +140,7 @@ export const Span = styled.span`
   border-radius: 35px;
   padding: 7px 14px; */
   /* line-height: 18px; */
+  margin-bottom:0;
   font-size: 12px;
   color: #12141780;
   &:not(:last-child):after {
@@ -141,6 +148,22 @@ export const Span = styled.span`
     content: '|';
     padding: 0 3px;
   }
+`;
+
+export const SpanQ = styled.span`
+  background-color: #f9f9f9;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  /* border-radius: 35px;
+  padding: 7px 14px;  */
+  /* line-height: 18px; */
+  font-size: 12px;
+  color: #363535;
+  /* &:not(:last-child):after {
+    color: grey;
+    content: '|';
+    padding: 0 3px;
+  } */
 `;
 
 export const DescriptionText = styled.p`
@@ -152,7 +175,8 @@ export const DescriptionText = styled.p`
 `;
 
 export const AdressTextStyled = styled.p`
-  margin-top: 8px;
+  /* margin-top: 8px; */
+  margin-bottom: 0;
 `;
 
 
@@ -160,15 +184,15 @@ export const AdressTextStyled = styled.p`
 export const AccessoriesText = styled.p`
   font-size: 14px;
   font-weight: 500;
-  line-height: 20px; 
+  /* line-height: 20px;  */
 
-  margin-top: 24px;
+  /* margin-top: 24px; */
 `;
 
 export const RentalText = styled.p`
   font-size: 14px;
   font-weight: 500;
-  line-height: 20px;
+  /* line-height: 20px; */
 
   margin-top: 24px;
 `;
@@ -189,7 +213,7 @@ background-color: blue;
 
   font-size: 14px;
   font-weight: 600;
-  line-height: 20px;
+  /* line-height: 20px; */
 
   border-radius: 12px;
   border: none;
@@ -222,7 +246,7 @@ export const DescriptionRentalPStyled = styled.div`
   border-radius: 35px;
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  /* line-height: 18px; */
   letter-spacing: -0.24px;
 `;
 

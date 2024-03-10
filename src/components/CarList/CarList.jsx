@@ -10,7 +10,11 @@ import Modal from '../Modal/Modal';
 
 import { selectFavoriteCars } from '../../redux/carsSelectors';
 import { addToFavorites, removeFromFavorites } from '../../redux/carsSlice';
-import { getCityFromAddress, getCountryFromAddress } from '../helpers/utils';
+import {
+  getCityFromAddress,
+  getCountryFromAddress,
+
+} from '../helpers/utils';
 
 
 
@@ -33,6 +37,7 @@ const CarList = ({ car }) => {
   } = car;
   const city = getCityFromAddress(car);
   const country = getCountryFromAddress(car);
+  
 
   const carIsFavorite = favoriteCars.some(
     favoriteCar => favoriteCar.id === car.id
@@ -83,6 +88,7 @@ const CarList = ({ car }) => {
           <SC.Span>{city}</SC.Span>
           <SC.Span>{country}</SC.Span>
           <SC.Span>{rentalCompany}</SC.Span>
+          <SC.Span>Premium</SC.Span>
         </SC.AdressWrapper>
 
         <SC.TextWrapper>

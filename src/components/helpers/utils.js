@@ -26,8 +26,29 @@ export const getSecurityDeposit = advert => {
 };
 
 export const getFormatMileage = advert => {
-  return advert.mileage.toString().replace( ',');
+  return advert.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
+
+
+
+export const getFormatRentalPrice = (advert) => {
+  if (
+    !advert ||
+    typeof advert.rentalPrice !== 'string' ||
+    advert.rentalPrice.length < 2
+  ) {
+    return null; // Return null if advert object is invalid or rentalPrice is not a valid string
+  }
+
+  const currencySymbol = advert.rentalPrice.charAt(0); // Get the currency symbol
+  const numericPart = advert.rentalPrice.slice(1); // Get the numeric part of the rental price
+
+  // Format the rental price with the currency symbol
+  return `${numericPart}${currencySymbol}`;
+};
+
+
+
 
 
 

@@ -1,31 +1,26 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
-
-
 export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  
 `;
 
 export const Title = styled.span`
   font-size: 25px;
-  font-weight:600;
+  font-weight: 600;
   color: white;
   margin-top: 40px;
 `;
 
 export const Span = styled.span`
   color: red;
-
 `;
 
 export const LinkStyled = styled(Link)`
@@ -42,7 +37,7 @@ export const LinkStyled = styled(Link)`
   text-decoration: none;
 
   color: white;
- 
+
   font-size: 25px;
   font-weight: 600;
   line-height: 20px;
@@ -56,5 +51,3 @@ export const LinkStyled = styled(Link)`
     background-color: #0b44cd;
   }
 `;
-
-

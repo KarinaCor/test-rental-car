@@ -1,4 +1,3 @@
-
 import { configureStore } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import {
@@ -13,10 +12,8 @@ import { carsReducer } from './carsSlice';
 import { persistStore, persistReducer } from 'redux-persist';
 import { filtersReducer } from './filter/filterSlice';
 
-// import {  filterSlice } from './filter/filterSlice';
-
 const carsPersistConfig = {
-  key: 'favoriteCars', // Назва ключа в LocalStorage
+  key: 'favoriteCars',
   storage,
   whitelist: ['favoriteCars'],
 };
@@ -27,10 +24,6 @@ export const store = configureStore({
   reducer: {
     filters: filtersReducer,
     cars: persistedReducer,
-
-    // filter: filterReducer
-
-    // filter: filterSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
