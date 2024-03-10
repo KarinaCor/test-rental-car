@@ -1,4 +1,4 @@
-import{s as e,b as r,j as t}from"./index-c7daa58e.js";import{d as a,C as s}from"./CarList-1c0fac32.js";const p=e.div`
+import{s as e,b as r,j as t}from"./index-de1927f1.js";import{d as a,C as s}from"./CarList-6ce1908e.js";const p=e.div`
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 70px;
@@ -6,6 +6,7 @@ import{s as e,b as r,j as t}from"./index-c7daa58e.js";import{d as a,C as s}from"
   padding-right: 128px;
   padding-bottom: 150px;
   text-align: center;
+  min-height: 66vh;
 `,l=e.p`
   font-size: 18px;
   font-weight: 600;
@@ -28,4 +29,4 @@ import{s as e,b as r,j as t}from"./index-c7daa58e.js";import{d as a,C as s}from"
   line-height: 24px;
   text-decoration-line: underline;
   border: none;
-`;const g=()=>{const n=r(a),o=n.length>0;return t.jsx("section",{children:t.jsxs(p,{children:[!o&&t.jsx(l,{children:"There are no favorite cars"}),o&&t.jsx(x,{children:n.map(i=>t.jsx("li",{children:t.jsx(s,{car:i})},i.id))})]})})};export{g as default};
+`;const g=()=>{const n=r(a),i=n.length>0;return t.jsx("section",{children:t.jsxs(p,{children:[!i&&t.jsx(l,{children:"There are no favorite cars yet"}),i&&t.jsx(x,{children:n.map(o=>t.jsx("li",{children:t.jsx(s,{car:o})},o.id))})]})})};export{g as default};

@@ -1,4 +1,4 @@
-import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-c7daa58e.js";import{s as k,a as P,b as F,c as S,C as B}from"./CarList-1c0fac32.js";const L=t.div`
+import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-de1927f1.js";import{s as k,a as P,b as F,c as S,C as B}from"./CarList-6ce1908e.js";const L=t.div`
   max-width: 1440px;
   margin: 0 auto;
   margin-top: 70px;
@@ -32,12 +32,12 @@ import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-c7da
   &:focus {
     color: #0b44cd;
   }
-`,E=["Buick","Volvo","HUMMER","Subaru","Mitsubishi","Nissan","Lincoln","GMC","Hyundai","MINI","Bentley","Mercedes-Benz","Aston Martin","Pontiac","Lamborghini","Audi","BMW","Chevrolet","Mercedes-Benz","Chrysler","Kia","Land"],R=[10,20,30,40,50,60],A="useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";let m=(i=21)=>{let n="",r=crypto.getRandomValues(new Uint8Array(i));for(;i--;)n+=A[r[i]&63];return n};const N=t.form`
+`,E=["Buick","Volvo","HUMMER","Subaru","Mitsubishi","Nissan","Lincoln","GMC","Hyundai","MINI","Bentley","Mercedes-Benz","Aston Martin","Pontiac","Lamborghini","Audi","BMW","Chevrolet","Mercedes-Benz","Chrysler","Kia","Land"],R=[10,20,30,40,50,60,70,80,90,100,110,120,130,140,150],A="useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";let m=(i=21)=>{let n="",r=crypto.getRandomValues(new Uint8Array(i));for(;i--;)n+=A[r[i]&63];return n};const N=t.form`
   display: flex;
   gap: 18px;
   margin-bottom: 50px;
   justify-content: center;
-  flex-direction:row;
+  flex-direction: row;
 `,I=t.label`
   position: relative;
   display: flex;
@@ -52,11 +52,11 @@ import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-c7da
   border-radius: 14px;
   box-sizing: border-box;
   background: #f7f7fb;
-padding-left:18px;
+  padding-left: 18px;
   height: 48px;
   border: none;
-  font-size: 18px; 
- font-weight: 500; 
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.11;
   width: 224px;
 `,D=t.select`
@@ -73,7 +73,7 @@ padding-left:18px;
   font-size: 18px;
   font-weight: 500;
 `;t.option`
-background-color:red;
+  background-color: red;
 `;t.div`
   padding: 50px;
 
@@ -117,17 +117,16 @@ background-color:red;
 `;t.div`
   position: relative;
 `;const V=t.div`
-display:flex;
-flex-direction:row;
-gap:18px;
-margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin-top: 20px;
 `,b=t.button`
   display: flex;
-width:136px;
-height:48px;
-align-items:center;
-justify-content:center;
-  /* padding: 14px 44px 14px 44px; */
+  width: 136px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1px;
 
   font-weight: 600;

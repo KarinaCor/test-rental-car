@@ -1,4 +1,4 @@
-import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js";const ke=n=>n.cars.itemsCars,O=n=>n.cars.favoriteCars,Ae=n=>n.cars.isLoading,ze=n=>n.cars.error,Se=n=>n.filters.carBrand,N=t.div`
+import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-de1927f1.js";const ze=n=>n.cars.itemsCars,O=n=>n.cars.favoriteCars,Ae=n=>n.cars.isLoading,Se=n=>n.cars.error,Fe=n=>n.filters.carBrand,N=t.div`
   display: flex;
   width: 274px;
   height: 426px;
@@ -63,7 +63,19 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
   width: 270px;
   margin-top: 4px;
   margin-bottom: 0;
-`,r=t.span`
+`,c=t.span`
+  color: #12141780;
+
+  font-size: 12px;
+  white-space: nowrap;
+ 
+  text-overflow: ellipsis;
+  &:not(:last-child):after {
+    color: grey;
+    content: '|';
+    padding: 0 3px;
+  }
+`,V=t.span`
   color: #12141780;
 
   font-size: 12px;
@@ -75,7 +87,7 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
     content: '|';
     padding: 0 3px;
   }
-`,V=t.button`
+`,Z=t.button`
   cursor: pointer;
 
   width: 100%;
@@ -104,10 +116,10 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
   &:focus {
     background-color: #0b44cd;
   }
-`,Z="/test-rental-car/assets/sprite-icons-c6e42e19.svg",M=n=>n.address.split(",")[1],$=n=>n.address.split(",")[2],_=n=>{const s=n.rentalConditions.split(`
-`),[c,o]=s[0].split(": ");return{key:c,value:o}},ee=n=>n.rentalConditions.split(`
-`)[1],te=n=>n.rentalConditions.split(`
-`)[2],ne=n=>n.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g,","),oe=n=>{if(!n||typeof n.rentalPrice!="string"||n.rentalPrice.length<2)return null;const s=n.rentalPrice.charAt(0);return`${n.rentalPrice.slice(1)}${s}`},se=t.div`
+`,_="/test-rental-car/assets/sprite-icons-c6e42e19.svg",M=n=>n.address.split(",")[1],$=n=>n.address.split(",")[2],ee=n=>{const s=n.rentalConditions.split(`
+`),[r,o]=s[0].split(": ");return{key:r,value:o}},te=n=>n.rentalConditions.split(`
+`)[1],ne=n=>n.rentalConditions.split(`
+`)[2],oe=n=>n.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g,","),se=n=>{if(!n||typeof n.rentalPrice!="string"||n.rentalPrice.length<2)return null;const s=n.rentalPrice.charAt(0);return`${n.rentalPrice.slice(1)}${s}`},ie=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +128,8 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
   height: 100%;
   background: rgba(18, 20, 23, 0.5);
   overflow: auto;
-`,ie=t.div`
+  
+`,re=t.div`
   width: 541px;
   max-height: 752px;
   position: fixed;
@@ -125,14 +138,15 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-`,re=t.div`
+  border-radius: 24px;
+`,ce=t.div`
   position: absolute;
   top: 18px;
   right: 18px;
   background-color: #12141780;
-`,ce=t.div`
+`,ae=t.div`
   padding: 40px;
-`,de=t.button`
+`,le=t.button`
   position: absolute;
   top: 5px;
   right: 5px;
@@ -180,26 +194,26 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
   border-radius: 50%;
 `;t.svg`
   stroke: currentColor;
-`;const le=t.div`
+`;const de=t.div`
   width: 461px;
   height: 248px;
   margin: 0 auto;
   border-radius: 14px;
   overflow: hidden;
-`,ae=t.img`
+`,pe=t.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`,pe=t.div`
+`,xe=t.div`
   font-size: 18px;
   font-weight: 500;
 
   margin-top: 14px;
-`,xe=t.span`
+`,he=t.span`
   color: #3470ff;
 `,I=t.p`
   margin-bottom: 0;
-`,he=t.p`
+`,ge=t.p`
   margin-top: 4px;
 `,i=t.span`
   margin-bottom: 0;
@@ -217,22 +231,23 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
 
   font-size: 12px;
   color: #363535;
-`,ge=t.p`
+`,fe=t.p`
   font-size: 14px;
   font-weight: 400;
-
+margin-bottom: 24px;
   margin-top: 14px;
-`,fe=t.p`
+`,me=t.p`
   margin-bottom: 0;
 `,ue=t.p`
   font-size: 14px;
   font-weight: 500;
-`,me=t.p`
+  margin-bottom: 8px;
+`,je=t.p`
   font-size: 14px;
   font-weight: 500;
 
   margin-top: 24px;
-`,je=t.button`
+`,be=t.button`
   cursor: pointer;
 
   width: 100%;
@@ -252,10 +267,10 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
   border: none;
 
   margin-top: 24px;
-`,be=t.div`
+`,ye=t.div`
   display: flex;
   gap: 8px;
-`,ye=t.div`
+`,ve=t.div`
   display: flex;
   gap: 10px;
 
@@ -275,6 +290,6 @@ import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js
 `;const F=t.span`
   font-weight: 600;
   color: #3470ff;
-`,ve=t.a`
+`,we=t.a`
   color: white;
-`,we=({children:n,isOpen:s,closeFnc:c,car:o})=>{const d=P.useCallback(()=>{s&&c()},[s,c]);P.useEffect(()=>{const h=W=>{W.code==="Escape"&&d()};return s?(document.body.classList.add("body-modal-open"),window.addEventListener("keydown",h)):document.body.classList.remove("body-modal-open"),()=>{window.removeEventListener("keydown",h),document.body.classList.remove("body-modal-open")}},[s,d]);const f=h=>{h.target===h.currentTarget&&d()},{id:b,year:u,make:m,model:y,type:v,img:w,description:j,accessories:l,fuelConsumption:C,engineSize:k,functionalities:a}=o,p=M(o),A=$(o),x=_(o),z=ee(o),S=te(o),T=ne(o),L=oe(o);return e.jsx(e.Fragment,{children:e.jsx(se,{onClick:f,children:e.jsxs(ie,{onClick:f,children:[e.jsxs(re,{children:[n,e.jsx(de,{onClick:d,children:"X"})]}),e.jsxs(ce,{children:[e.jsx(le,{children:e.jsx(ae,{src:w,alt:j})}),e.jsxs(pe,{children:[m," ",e.jsx(xe,{children:y}),", ",u]}),e.jsxs(I,{children:[e.jsx(i,{children:p}),e.jsx(i,{children:A}),e.jsxs(i,{children:["Id: ",b]}),e.jsxs(i,{children:["Year: ",u]}),e.jsxs(i,{children:["Type: ",v]})]}),e.jsxs(I,{children:[e.jsxs(i,{children:["Fuel Consumption: ",C]}),e.jsxs(i,{children:["Engine Size: ",k]})]}),e.jsx(ge,{children:j}),e.jsx(ue,{children:"Accessories and functionalities:"}),e.jsxs(fe,{children:[e.jsx(i,{children:l[0]}),e.jsx(i,{children:l[1]}),e.jsx(i,{children:l[2]})]}),e.jsxs(he,{children:[e.jsx(i,{children:a[0]}),e.jsx(i,{children:a[1]}),e.jsx(i,{children:a[2]})]}),e.jsx(me,{children:"Rental Conditions:"}),e.jsxs(be,{children:[e.jsxs(g,{children:[x.key,": ",e.jsx(F,{children:x.value})]}),e.jsx(g,{children:z})]}),e.jsxs(ye,{children:[e.jsx(g,{children:S}),e.jsxs(g,{children:["Mileage: ",e.jsx(F,{children:T})]}),e.jsxs(g,{children:["Price: ",e.jsx(F,{children:L})]})]}),e.jsx(je,{type:"button",children:e.jsx(ve,{href:"tel:+380730000000",children:"Rental car"})})]})]})})})},Fe=({car:n})=>{const s=E(),c=R(O),[o,d]=P.useState(!1),{id:f,year:b,make:u,model:m,type:y,img:v,description:w,rentalPrice:j,rentalCompany:l,accessories:C}=n,k=M(n),a=$(n),p=c.some(S=>S.id===n.id),A=()=>{s(p?B(n):D(n))},x=()=>{d(!o)},z=p?"heart-active":"heart-normal";return e.jsxs(e.Fragment,{children:[e.jsxs(N,{children:[e.jsxs(Q,{children:[e.jsx(X,{src:v,alt:w}),e.jsx(Y,{type:"button",onClick:A,"aria-label":p?"Remove from favorites":"Add to favorites",children:e.jsx(q,{width:"14",height:"14",children:e.jsx("use",{href:`${Z}#${z}`})})})]}),e.jsxs(G,{children:[e.jsxs("div",{children:[u," ",e.jsx(H,{children:m}),", ",b]}),e.jsx(J,{children:j})]}),e.jsxs(K,{children:[e.jsx(r,{children:k}),e.jsx(r,{children:a}),e.jsx(r,{children:l}),e.jsx(r,{children:"Premium"})]}),e.jsxs(U,{children:[e.jsx(r,{children:y}),e.jsx(r,{children:m}),e.jsx(r,{children:f}),e.jsx(r,{children:C[0]})]}),e.jsx(V,{type:"button",onClick:x,children:"Learn more"})]}),o&&e.jsx(we,{car:n,isOpen:o,closeFnc:x})]})};export{Fe as C,Se as a,ze as b,Ae as c,O as d,ke as s};
+`,Ce=({children:n,isOpen:s,closeFnc:r,car:o})=>{const a=P.useCallback(()=>{s&&r()},[s,r]);P.useEffect(()=>{const h=W=>{W.code==="Escape"&&a()};return s?(document.body.classList.add("body-modal-open"),window.addEventListener("keydown",h)):document.body.classList.remove("body-modal-open"),()=>{window.removeEventListener("keydown",h),document.body.classList.remove("body-modal-open")}},[s,a]);const f=h=>{h.target===h.currentTarget&&a()},{id:b,year:m,make:u,model:y,type:v,img:w,description:j,accessories:l,fuelConsumption:C,engineSize:k,functionalities:d}=o,p=M(o),z=$(o),x=ee(o),A=te(o),S=ne(o),T=oe(o),L=se(o);return e.jsx(e.Fragment,{children:e.jsx(ie,{onClick:f,children:e.jsxs(re,{onClick:f,children:[e.jsxs(ce,{children:[n,e.jsx(le,{onClick:a,children:"X"})]}),e.jsxs(ae,{children:[e.jsx(de,{children:e.jsx(pe,{src:w,alt:j})}),e.jsxs(xe,{children:[u," ",e.jsx(he,{children:y}),", ",m]}),e.jsxs(I,{children:[e.jsx(i,{children:p}),e.jsx(i,{children:z}),e.jsxs(i,{children:["Id: ",b]}),e.jsxs(i,{children:["Year: ",m]}),e.jsxs(i,{children:["Type: ",v]})]}),e.jsxs(I,{children:[e.jsxs(i,{children:["Fuel Consumption: ",C]}),e.jsxs(i,{children:["Engine Size: ",k]})]}),e.jsx(fe,{children:j}),e.jsx(ue,{children:"Accessories and functionalities:"}),e.jsxs(me,{children:[e.jsx(i,{children:l[0]}),e.jsx(i,{children:l[1]}),e.jsx(i,{children:l[2]})]}),e.jsxs(ge,{children:[e.jsx(i,{children:d[0]}),e.jsx(i,{children:d[1]}),e.jsx(i,{children:d[2]})]}),e.jsx(je,{children:"Rental Conditions:"}),e.jsxs(ye,{children:[e.jsxs(g,{children:[x.key,": ",e.jsx(F,{children:x.value})]}),e.jsx(g,{children:A})]}),e.jsxs(ve,{children:[e.jsx(g,{children:S}),e.jsxs(g,{children:["Mileage: ",e.jsx(F,{children:T})]}),e.jsxs(g,{children:["Price: ",e.jsx(F,{children:L})]})]}),e.jsx(be,{type:"button",children:e.jsx(we,{href:"tel:+380730000000",children:"Rental car"})})]})]})})})},Pe=({car:n})=>{const s=E(),r=R(O),[o,a]=P.useState(!1),{id:f,year:b,make:m,model:u,type:y,img:v,description:w,rentalPrice:j,rentalCompany:l,accessories:C}=n,k=M(n),d=$(n),p=r.some(S=>S.id===n.id),z=()=>{s(p?B(n):D(n))},x=()=>{a(!o)},A=p?"heart-active":"heart-normal";return e.jsxs(e.Fragment,{children:[e.jsxs(N,{children:[e.jsxs(Q,{children:[e.jsx(X,{src:v,alt:w}),e.jsx(Y,{type:"button",onClick:z,"aria-label":p?"Remove from favorites":"Add to favorites",children:e.jsx(q,{width:"14",height:"14",children:e.jsx("use",{href:`${_}#${A}`})})})]}),e.jsxs(G,{children:[e.jsxs("div",{children:[m," ",e.jsx(H,{children:u}),", ",b]}),e.jsx(J,{children:j})]}),e.jsxs(K,{children:[e.jsx(c,{children:k}),e.jsx(c,{children:d}),e.jsx(c,{children:l}),e.jsx(c,{children:"Premium"})]}),e.jsxs(U,{children:[e.jsx(c,{children:y}),e.jsx(c,{children:u}),e.jsx(c,{children:f}),e.jsx(V,{children:C[0]})]}),e.jsx(Z,{type:"button",onClick:x,children:"Learn more"})]}),o&&e.jsx(Ce,{car:n,isOpen:o,closeFnc:x})]})};export{Pe as C,Fe as a,Se as b,Ae as c,O as d,ze as s};

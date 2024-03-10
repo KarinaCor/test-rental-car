@@ -100,12 +100,10 @@ Error generating stack: `+i.message+`
 `,cs=on(I0)`
   text-decoration: none;
   font-size: 18px;
-
   color: black;
-  font-weight: 600;
-  &:hover,
-  &:focus {
-    background-color: #0b44cd;
+  font-weight: 500;
+  &.active {
+    color: #0b44cd;
   }
 `,b1=()=>F.jsxs(V1,{children:[F.jsx(cs,{to:"/",children:"Home"}),F.jsx(cs,{to:"/catalog",children:"Catalog"}),F.jsx(cs,{to:"/favorites",children:"Favorites"})]}),K1=()=>F.jsxs(W1,{children:[F.jsx(H1,{to:"/",children:"RentalCar"}),F.jsx(b1,{})]}),Q1=on.div`
   display: flex;
@@ -127,7 +125,7 @@ Error generating stack: `+i.message+`
   font-size: 18px;
 
 
-`,X1=()=>F.jsxs(Q1,{children:[F.jsx(G1,{children:"Copyright © "}),F.jsx(Y1,{href:"https://github.com/KarinaCor",target:"_blank",children:"Karina Ahadzhanian"})]}),q1=()=>F.jsxs(F.Fragment,{children:[F.jsx(K1,{}),F.jsx(C0,{fallback:null}),F.jsx(X1,{})]}),J1=R.lazy(()=>$a(()=>import("./HomePage-7ac6165f.js"),[])),Z1=R.lazy(()=>$a(()=>import("./CatalogPage-e8cc6c32.js"),["assets/CatalogPage-e8cc6c32.js","assets/CarList-1c0fac32.js"])),ew=R.lazy(()=>$a(()=>import("./FavoritePage-f3d9b8f2.js"),["assets/FavoritePage-f3d9b8f2.js","assets/CarList-1c0fac32.js"])),tw=()=>F.jsx(F.Fragment,{children:F.jsx(R.Suspense,{children:F.jsx(P0,{children:F.jsxs(Tr,{path:"/",element:F.jsx(q1,{}),children:[F.jsx(Tr,{path:"/",element:F.jsx(J1,{})}),F.jsx(Tr,{path:"/catalog",element:F.jsx(Z1,{})}),F.jsx(Tr,{path:"/favorites",element:F.jsx(ew,{})})]})})})});var dm={exports:{}},pm={};/**
+`,X1=()=>F.jsxs(Q1,{children:[F.jsx(G1,{children:"Copyright © "}),F.jsx(Y1,{href:"https://github.com/KarinaCor",target:"_blank",children:"Karina Ahadzhanian"})]}),q1=()=>F.jsxs(F.Fragment,{children:[F.jsx(K1,{}),F.jsx(C0,{fallback:null}),F.jsx(X1,{})]}),J1=R.lazy(()=>$a(()=>import("./HomePage-cb774b3c.js"),[])),Z1=R.lazy(()=>$a(()=>import("./CatalogPage-c80823aa.js"),["assets/CatalogPage-c80823aa.js","assets/CarList-6ce1908e.js"])),ew=R.lazy(()=>$a(()=>import("./FavoritePage-0a8bbb1f.js"),["assets/FavoritePage-0a8bbb1f.js","assets/CarList-6ce1908e.js"])),tw=()=>F.jsx(F.Fragment,{children:F.jsx(R.Suspense,{children:F.jsx(P0,{children:F.jsxs(Tr,{path:"/",element:F.jsx(q1,{}),children:[F.jsx(Tr,{path:"/",element:F.jsx(J1,{})}),F.jsx(Tr,{path:"/catalog",element:F.jsx(Z1,{})}),F.jsx(Tr,{path:"/favorites",element:F.jsx(ew,{})})]})})})});var dm={exports:{}},pm={};/**
  * @license React
  * use-sync-external-store-with-selector.production.min.js
  *
