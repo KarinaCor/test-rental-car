@@ -1,4 +1,4 @@
-import{s as e,b as r,j as t}from"./index-de1927f1.js";import{d as a,C as s}from"./CarList-6ce1908e.js";const p=e.div`
+import{s as e,b as r,j as t}from"./index-9af0a66a.js";import{d as a,C as s}from"./CarList-40f152f4.js";const p=e.div`
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 70px;

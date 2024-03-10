@@ -1,4 +1,4 @@
-import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-de1927f1.js";import{s as k,a as P,b as F,c as S,C as B}from"./CarList-6ce1908e.js";const L=t.div`
+import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-9af0a66a.js";import{s as k,a as P,b as F,c as S,C as B}from"./CarList-40f152f4.js";const L=t.div`
   max-width: 1440px;
   margin: 0 auto;
   margin-top: 70px;
@@ -59,6 +59,7 @@ import{s as t,u as j,r as c,j as e,a as v,b as u,c as w,d as C}from"./index-de19
   font-weight: 500;
   line-height: 1.11;
   width: 224px;
+  
 `,D=t.select`
   width: 125px;
   height: 48px;
