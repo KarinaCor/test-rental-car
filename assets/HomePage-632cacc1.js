@@ -1,21 +1,19 @@
-import{s as t,L as n,j as e}from"./index-a7980c7a.js";const o=t.div`
+import{s as t,L as n,j as e}from"./index-d26798a6.js";const o=t.div`
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  
 `,r=t.span`
   font-size: 25px;
-  font-weight:600;
+  font-weight: 600;
   color: white;
   margin-top: 40px;
 `,i=t.span`
   color: red;
-
 `,a=t(n)`
   cursor: pointer;
 
@@ -30,7 +28,7 @@ import{s as t,L as n,j as e}from"./index-a7980c7a.js";const o=t.div`
   text-decoration: none;
 
   color: white;
- 
+
   font-size: 25px;
   font-weight: 600;
   line-height: 20px;
