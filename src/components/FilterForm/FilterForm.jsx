@@ -28,14 +28,95 @@ const FilterForm = () => {
   };
 
   return (
-    <SC.FilterFormStyled
+    // <SC.FilterFormStyled
+    //   $priceFocus={priceFocus}
+    //   $brandFocus={brandFocus}
+    //   onSubmit={(e) => handleSubmit(e, dispatch, addToCarBrand, formData)}
+    // >
+    //   <div className="label-container brand-container font-manrope">
+    //     <label htmlFor="make">Car brand</label>
+    //     <select
+    //       onFocus={() => setBrandFocus(true)}
+    //       onBlur={() => setBrandFocus(false)}
+    //       onChange={(e) => handleChange(e, setBrandFocus)}
+    //       name="make"
+    //       id="brand"
+    //       value={formData.make}
+    //       required
+    //     >
+    //       <option
+    //         value="defaultPrice"
+    //         key="default"
+    //         defaultValue
+    //         className="first-option"
+    //       >
+    //         Enter the text
+    //       </option>
+    //       {MARK_CAR.map((brand) => {
+    //         const id = nanoid();
+    //         return (
+    //           <option value={brand} key={id}>
+    //             {brand}
+    //           </option>
+    //         );
+    //       })}
+    //     </select>
+
+    //     {/* <ArrowSvg className="arrow-svg brand-svg" /> */}
+    //   </div>
+
+    //   <div className="label-container price-container">
+    //     <label htmlFor="rentPrice" className="">
+    //       Price/ 1hour
+    //     </label>
+
+    //     <select
+    //       onFocus={() => setPriceFocus(true)}
+    //       onBlur={() => setPriceFocus(false)}
+    //       name="rentalPrice"
+    //       onChange={(e) => handleChange(e, setPriceFocus)}
+    //       id="price"
+    //       value={formData.rentalPrice}
+    //       required
+    //     >
+    //       <option value="defaultPrice" defaultValue className="first-option ">
+    //         To $
+    //       </option>
+    //       {PRICE_HOUR.map((value) => {
+    //         const id = nanoid();
+    //         return (
+    //           <option key={id} value={value}>
+    //             {value}
+    //           </option>
+    //         );
+    //       })}
+    //     </select>
+    //     <div className="arrow-container">
+    //       {/* <ArrowSvg className="arrow-svg price-svg" /> */}
+    //     </div>
+    //   </div>
+
+    //   <div className="btn-container">
+    //     <button className="accept-btn" type="submit">
+    //       Search
+    //     </button>
+    //     <button
+    //       className="reset-btn"
+    //       onClick={() => resetForm(setFormData)}
+    //       type="button"
+    //     >
+    //       Reset
+    //     </button>
+    //   </div>
+    // </SC.FilterFormStyled>
+    <SC.Form
       $priceFocus={priceFocus}
       $brandFocus={brandFocus}
       onSubmit={(e) => handleSubmit(e, dispatch, addToCarBrand, formData)}
     >
-      <div className="label-container brand-container font-manrope">
-        <label htmlFor="make">Car brand</label>
-        <select
+      <div>
+        <SC.Label htmlFor="make">Car brand</SC.Label>
+        <SC.Select
           onFocus={() => setBrandFocus(true)}
           onBlur={() => setBrandFocus(false)}
           onChange={(e) => handleChange(e, setBrandFocus)}
@@ -48,7 +129,7 @@ const FilterForm = () => {
             value="defaultPrice"
             key="default"
             defaultValue
-            className="first-option"
+            // className="first-option"
           >
             Enter the text
           </option>
@@ -60,17 +141,17 @@ const FilterForm = () => {
               </option>
             );
           })}
-        </select>
+        </SC.Select>
 
-        {/* <ArrowSvg className="arrow-svg brand-svg" /> */}
+    
       </div>
 
-      <div className="label-container price-container">
-        <label htmlFor="rentPrice" className="">
+      <div >
+        <label htmlFor="rentPrice" >
           Price/ 1hour
         </label>
 
-        <select
+        <SC.SelectPrice
           onFocus={() => setPriceFocus(true)}
           onBlur={() => setPriceFocus(false)}
           name="rentalPrice"
@@ -90,25 +171,25 @@ const FilterForm = () => {
               </option>
             );
           })}
-        </select>
+        </SC.SelectPrice>
         <div className="arrow-container">
           {/* <ArrowSvg className="arrow-svg price-svg" /> */}
         </div>
       </div>
 
-      <div className="btn-container">
-        <button className="accept-btn" type="submit">
+      <SC.ButtonWrapper className="btn-container">
+        <SC.ButtonSearch className="accept-btn" type="submit">
           Search
-        </button>
-        <button
+        </SC.ButtonSearch>
+        <SC.ButtonSearch
           className="reset-btn"
           onClick={() => resetForm(setFormData)}
           type="button"
         >
           Reset
-        </button>
-      </div>
-    </SC.FilterFormStyled>
+        </SC.ButtonSearch>
+      </SC.ButtonWrapper>
+    </SC.Form>
   );
 };
 
