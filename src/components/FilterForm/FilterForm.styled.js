@@ -31,6 +31,7 @@ export const Select = styled.select`
   font-weight: 500;
   line-height: 1.11;
   width: 224px;
+  
 `;
 
 export const SelectPrice = styled.select`

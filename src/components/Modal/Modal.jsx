@@ -81,13 +81,13 @@ const Modal = ({ children, isOpen, closeFnc, car }) => {
               {make} <SC.ModelSpan>{model}</SC.ModelSpan>, {year}
             </SC.NameWrapper>
 
-            <SC.Description>
+            <SC.DescriptionAdress>
               <SC.Span>{city}</SC.Span>
               <SC.Span>{country}</SC.Span>
               <SC.Span>Id: {id}</SC.Span>
               <SC.Span>Year: {year}</SC.Span>
               <SC.Span>Type: {type}</SC.Span>
-            </SC.Description>
+            </SC.DescriptionAdress>
 
             <SC.Description>
               <SC.Span>Fuel Consumption: {fuelConsumption}</SC.Span>
@@ -100,11 +100,11 @@ const Modal = ({ children, isOpen, closeFnc, car }) => {
               Accessories and functionalities:
             </SC.AccessoriesText>
 
-            <SC.AdressTextStyled>
+            <SC.TextStyled>
               <SC.Span>{accessories[0]}</SC.Span>
               <SC.Span>{accessories[1]}</SC.Span>
               <SC.Span>{accessories[2]}</SC.Span>
-            </SC.AdressTextStyled>
+            </SC.TextStyled>
 
             <SC.TypeTextStyled>
               <SC.Span>{functionalities[0]}</SC.Span>

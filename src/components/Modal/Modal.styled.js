@@ -122,8 +122,18 @@ export const Description = styled.p`
   margin-bottom: 0;
 `;
 
+export const DescriptionAdress = styled.p`
+  margin-bottom: 0;
+  margin-top: 8px;
+`;
+
 export const TypeTextStyled = styled.p`
   margin-top: 4px;
+`;
+
+export const TextStyled = styled.p`
+  margin-top: 4px;
+  margin-bottom: 0;
 `;
 
 export const Span = styled.span`
@@ -136,6 +146,8 @@ export const Span = styled.span`
     padding: 0 3px;
   }
 `;
+
+
 
 export const SpanQ = styled.span`
   background-color: #f9f9f9;
