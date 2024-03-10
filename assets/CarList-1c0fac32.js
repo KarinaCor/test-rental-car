@@ -1,4 +1,4 @@
-import{s as t,r as P,j as e,b as E,d as R,g as B,h as D}from"./index-cab19283.js";const ke=n=>n.cars.itemsCars,O=n=>n.cars.favoriteCars,Ae=n=>n.cars.isLoading,ze=n=>n.cars.error,Se=n=>n.filters.carBrand,N=t.div`
+import{s as t,r as P,j as e,u as E,b as R,e as B,f as D}from"./index-c7daa58e.js";const ke=n=>n.cars.itemsCars,O=n=>n.cars.favoriteCars,Ae=n=>n.cars.isLoading,ze=n=>n.cars.error,Se=n=>n.filters.carBrand,N=t.div`
   display: flex;
   width: 274px;
   height: 426px;
