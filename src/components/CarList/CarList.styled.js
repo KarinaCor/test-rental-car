@@ -90,6 +90,20 @@ export const Span = styled.span`
 
   font-size: 12px;
   white-space: nowrap;
+ 
+  text-overflow: ellipsis;
+  &:not(:last-child):after {
+    color: grey;
+    content: '|';
+    padding: 0 3px;
+  }
+`;
+
+export const Span2 = styled.span`
+  color: #12141780;
+
+  font-size: 12px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   &:not(:last-child):after {

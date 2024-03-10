@@ -5,7 +5,7 @@ export const Form = styled.form`
   gap: 18px;
   margin-bottom: 50px;
   justify-content: center;
-  flex-direction:row;
+  flex-direction: row;
 `;
 
 export const Label = styled.label`
@@ -24,11 +24,11 @@ export const Select = styled.select`
   border-radius: 14px;
   box-sizing: border-box;
   background: #f7f7fb;
-padding-left:18px;
+  padding-left: 18px;
   height: 48px;
   border: none;
-  font-size: 18px; 
- font-weight: 500; 
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.11;
   width: 224px;
 `;
@@ -49,7 +49,7 @@ export const SelectPrice = styled.select`
 `;
 
 export const Option = styled.option`
-background-color:red;
+  background-color: red;
 `;
 
 export const Wrapper = styled.div`
@@ -75,10 +75,6 @@ export const PriceWrapper = styled.div`
 `;
 
 export const SelectLabel = styled.p``;
-
-
-
-
 
 export const InputWrap = styled.div`
   display: flex;
@@ -117,19 +113,18 @@ export const WrapSecondInput = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-display:flex;
-flex-direction:row;
-gap:18px;
-margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin-top: 20px;
 `;
 
 export const ButtonSearch = styled.button`
   display: flex;
-width:136px;
-height:48px;
-align-items:center;
-justify-content:center;
-  /* padding: 14px 44px 14px 44px; */
+  width: 136px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1px;
 
   font-weight: 600;
@@ -148,4 +143,3 @@ justify-content:center;
     background-color: #0b44cd;
   }
 `;
-

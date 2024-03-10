@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding-right: 128px;
   padding-bottom: 150px;
   text-align: center;
+  min-height: 66vh;
 `;
 
 export const TextSkeleton = styled.p`

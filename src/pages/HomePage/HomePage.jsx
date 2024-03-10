@@ -1,5 +1,5 @@
 import * as SC from './HomePage.styled';
-import { IMG } from '../../components/images/';
+import { IMG } from '../../components/images/index';
 
 const HomePage = () => {
   return (

@@ -3,7 +3,7 @@ import * as SC from './CarList.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import icon from '../../components/img/sprite-icons.svg';
+import icon from '../../components/images/icon/sprite-icons.svg';
 
 import Modal from '../Modal/Modal';
 
@@ -87,7 +87,7 @@ const CarList = ({ car }) => {
           <SC.Span>{type}</SC.Span>
           <SC.Span>{model}</SC.Span>
           <SC.Span>{id}</SC.Span>
-          <SC.Span>{accessories[0]}</SC.Span>
+          <SC.Span2>{accessories[0]}</SC.Span2>
         </SC.TextWrapper>
 
         <SC.Btn type="button" onClick={toogleModal}>

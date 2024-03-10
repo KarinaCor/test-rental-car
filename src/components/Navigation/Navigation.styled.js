@@ -13,11 +13,9 @@ export const Nav = styled.nav`
 export const NavLinkStyled = styled(NavLink)`
   text-decoration: none;
   font-size: 18px;
-
   color: black;
-  font-weight: 600;
-  &:hover,
-  &:focus {
-    background-color: #0b44cd;
+  font-weight: 500;
+  &.active {
+    color: #0b44cd;
   }
 `;

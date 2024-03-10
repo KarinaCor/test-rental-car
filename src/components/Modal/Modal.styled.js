@@ -9,6 +9,7 @@ export const Overlay = styled.div`
   height: 100%;
   background: rgba(18, 20, 23, 0.5);
   overflow: auto;
+  
 `;
 
 export const Modal = styled.div`
@@ -20,6 +21,7 @@ export const Modal = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
+  border-radius: 24px;
 `;
 
 export const Inner = styled.div`
@@ -147,7 +149,7 @@ export const SpanQ = styled.span`
 export const DescriptionText = styled.p`
   font-size: 14px;
   font-weight: 400;
-
+margin-bottom: 24px;
   margin-top: 14px;
 `;
 
@@ -158,6 +160,7 @@ export const AdressTextStyled = styled.p`
 export const AccessoriesText = styled.p`
   font-size: 14px;
   font-weight: 500;
+  margin-bottom: 8px;
 `;
 
 export const RentalText = styled.p`

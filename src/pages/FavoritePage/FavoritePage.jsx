@@ -14,7 +14,7 @@ const FavoritesPage = () => {
     <section>
       <SC.Container>
         {!isShowFavoriteList && (
-          <SC.TextSkeleton>There are no favorite cars</SC.TextSkeleton>
+          <SC.TextSkeleton>There are no favorite cars yet</SC.TextSkeleton>
         )}
 
         {isShowFavoriteList && (
